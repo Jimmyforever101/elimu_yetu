@@ -16,7 +16,7 @@ $lessons = $pdo->query('SELECT l.*, c.title AS course_title FROM lessons l JOIN 
         body {
             min-height: 100vh;
             background: linear-gradient(120deg, #e3f2fd 0%, #f8fafc 100%), url('assets/images/education_bg.jpg') center/cover no-repeat;
-            overflow-x: hidden;
+
             width: 100%;
         }
         .user-header.fixed-top {
