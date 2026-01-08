@@ -1,0 +1,243 @@
+* {
+    box-sizing: border-box;
+}
+.navbar {
+    margin-bottom: 30px;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f8fafc;
+    color: #222;
+    box-sizing: border-box;
+}
+
+/* Admin Layout */
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+    width: 100vw;
+}
+.admin-sidebar {
+    width: 180px;
+    background: linear-gradient(135deg, #1976d2 0%, #90caf9 100%);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    z-index: 100;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.04);
+}
+.admin-sidebar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 32px;
+    text-align: center;
+}
+.admin-sidebar .nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.admin-sidebar .nav-link {
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: background 0.2s;
+}
+.admin-sidebar .nav-link.active {
+    background: rgba(255,255,255,0.15);
+    font-weight: bold;
+}
+.admin-content {
+    margin-left: 180px;
+    padding: 32px 24px;
+    width: 100%;
+    min-height: 100vh;
+    background: #f8fafc;
+    overflow-x: hidden;
+}
+.admin-content.container.mt-2 {
+    margin-left: 50px !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    padding-left: 24px !important;
+    padding-right: 10px !important;
+    width: auto;
+    min-height: 100vh;
+    background: #f8fafc;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+@media (max-width: 768px) {
+    .admin-sidebar {
+        position: static;
+        width: 100vw;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 12px 8px;
+    }
+    .admin-content {
+        margin-left: 0;
+        padding: 1px 6px;
+        width: 100vw;
+    }
+}
+@media (max-width: 576px) {
+    .container, .user-content {
+        padding-left: 6px !important;
+        padding-right: 6px !important;
+        padding-top: 80px !important;
+    }
+    .hero {
+        padding: 48px 6px 24px 6px !important;
+        font-size: 1.1rem;
+    }
+    .showcase-section {
+        padding: 18px 6px !important;
+        margin-bottom: 24px !important;
+    }
+    .footer-social {
+        font-size: 1rem;
+        padding: 8px 0 !important;
+    }
+    h1, .display-4 {
+        font-size: 2rem !important;
+    }
+    .card {
+        font-size: 0.98rem;
+    }
+    .navbar-brand {
+        font-size: 1.1rem !important;
+    }
+}
+.card {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border-radius: 10px;
+}
+.btn-primary, .btn-success, .btn-info, .btn-warning, .btn-danger {
+    border-radius: 20px;
+    padding: 8px 24px;
+}
+.table th, .table td {
+    vertical-align: middle !important;
+}
+input[type="text"], input[type="email"], input[type="password"], input[type="date"], textarea {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.form-label {
+    font-weight: 500;
+}
+.alert-info {
+    background: #e3f2fd;
+    color: #1976d2;
+    border-radius: 8px;
+}
+.alert-warning {
+    background: #fff3cd;
+    color: #856404;
+    border-radius: 8px;
+}
+.progress-bar {
+    font-weight: 500;
+}
+.list-group-item {
+    border-radius: 6px;
+}
+.pagination .page-link {
+    border-radius: 8px;
+}
+/* Admin Sidebar Styles - Consolidated 
+.admin-sidebar {
+    min-width: 160px;
+    background: linear-gradient(135deg, #1976d2 0%, #90caf9 100%);
+    border-right: 1px solid #e0e0e0;
+    height: 100vh;
+}
+
+/* Ensure admin content does not intersect sidebar/header */
+.admin-content {
+    margin-left: 160px !important;
+    padding-top: 0 !important;
+    padding-left: 12px !important;
+    padding-right: 0 !important;
+    background: #f8fafc;
+    min-height: 100vh;
+    width: auto;
+    overflow-x: hidden;
+}
+.container.mt-2 {
+    margin-top: 0 !important;
+}
+/* Removed stray properties outside selector blocks */
+.admin-sidebar .logo img {
+    height: 38px;
+    margin-right: 12px;
+}
+.admin-sidebar .admin-info {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.admin-sidebar .admin-info img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 8px;
+    border: 2px solid #fff;
+}
+.admin-sidebar .admin-info .name {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.admin-sidebar .nav {
+    flex-direction: column;
+    align-items: flex-start;
+}
+.admin-sidebar .nav-link {
+    color: #fff;
+    padding: 12px 24px;
+    width: 100%;
+    border-radius: 0;
+    font-size: 1.1rem;
+    transition: background 0.2s;
+}
+.admin-sidebar .nav-link.active {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    font-weight: bold;
+}
+/* Removed duplicate .admin-content block. Main definition is above with correct margin and padding. */
+.user-header.fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
+    transition: box-shadow 0.3s, top 0.3s, background 0.3s;
+    background: #fff;
+}
+.footer-social a i {
+    transition: transform 0.2s, filter 0.2s;
+}
+.footer-social a:hover i {
+    transform: scale(1.25);
+    filter: brightness(1.3);
+}
+
